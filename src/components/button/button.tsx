@@ -1,5 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
+import './style/index.scss'
+
+const classPrefix = 'vik-btn'
 
 export enum ButtonSize {
   Large = 'lg',
@@ -24,9 +27,9 @@ interface BaseButtonProps {
 
 const Button: React.FC<BaseButtonProps> = (props) => {
   const { btnType, disabled, size, href, children } = props
-  const classes = classNames('btn', {
-    [`btn-${btnType}`]: btnType,
-    [`btn-${size}`]: size,
+  const classes = classNames(classPrefix, {
+    [`${classPrefix}-${btnType}`]: btnType,
+    [`${classPrefix}-${size}`]: size,
     'disabled': (btnType === ButtonType.Link) && disabled
   })
   if (btnType === ButtonType.Link && href) {
