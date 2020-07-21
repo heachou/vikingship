@@ -1,10 +1,14 @@
 import React from 'react'
-import Button,{ ButtonType, ButtonSize }  from './components/button'
+import Button, { ButtonType, ButtonSize } from './components/button'
 
 function App() {
   return (
     <div className="App">
-      <Button size={ButtonSize.Small} btnType={ButtonType.Danger}>hello</Button>
+      <Button
+        className="my-btn"
+        size={ButtonSize.Large} 
+        btnType={ButtonType.Danger}
+      >hello</Button>
     </div>
   )
 }
